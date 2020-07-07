@@ -1,6 +1,13 @@
 import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { StyleSheet, Text, View, Dimensions, SafeAreaView } from "react-native";
+import React, { useState } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Dimensions,
+  SafeAreaView,
+  Switch,
+} from "react-native";
 import {
   useDimensions,
   useDeviceOrientation,
@@ -17,9 +24,12 @@ import ViewImageScreen from "./screens/ViewImageScreen";
 import Messagesscreen from "./screens/MessagesScreen";
 import AccountScreen from "./screens/AccountScreen";
 import ListingScreen from "./screens/ListingScreen";
+import AppTextInput from "./components/AppTextInput";
+import AppPicker from "./components/AppPicker";
+import LoginScreen from "./screens/LoginScreen";
 
 export default function App() {
-  return <ListingScreen></ListingScreen>;
+  return <LoginScreen />;
 }
 
 const styles = StyleSheet.create({
