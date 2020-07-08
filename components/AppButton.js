@@ -1,13 +1,16 @@
 import React from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
 import colors from "../config/colors";
 
-function AppButton({ title }) {
+function AppButton({ title, onPress, color = "primary" }) {
   return (
-    <View style={styles.button}>
-      <Text>{title}</Text>
-    </View>
+    <TouchableOpacity
+      style={[styles.button, { backgroundColor: colors[color] }]}
+      onPress={onPress}
+    >
+      <Text style={styles.text}>{title}</Text>
+    </TouchableOpacity>
   );
 }
 
@@ -17,7 +20,15 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     justifyContent: "center",
     alignItems: "center",
+    padding: 15,
     width: "100%",
+    marginVertical: 10,
+  },
+  text: {
+    color: colors.white,
+    fontSize: 18,
+    textTransform: "uppercase",
+    fontWeight: "bold",
   },
 });
 

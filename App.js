@@ -29,7 +29,7 @@ import AppPicker from "./components/AppPicker";
 import LoginScreen from "./screens/LoginScreen";
 
 export default function App() {
-  return <LoginScreen />;
+  return <Messagesscreen />;
 }
 
 const styles = StyleSheet.create({

@@ -9,14 +9,16 @@ import ListItemDeleteAction from "../components/ListItemDeleteAction";
 const initialMessages = [
   {
     id: 1,
-    title: "T1",
+    title:
+      "T1asdasd asd asdasdasd asd asdasd asdasd asdadsdf fgdfgdfg dfg dfg dfgd fgdfg dfg dfg dfg dfgdfg dfgd fgdfg dfgdfg dfg dfgdg dfg dfgd fgdg dfg df",
     description: "d1",
     image: require("../assets/mosh.jpg"),
   },
   {
     id: 2,
     title: "T2",
-    description: "d2",
+    description:
+      "D2 asdasd asd asdasdasd asd asdasd asdasd asdadsdf fgdfgdfg dfg dfg dfgd fgdfg dfg dfg dfg dfgdfg dfgd fgdfg dfgdfg dfg dfgdg dfg dfgd fgdg dfg df",
     image: require("../assets/mosh.jpg"),
   },
 ];
