@@ -4,23 +4,26 @@ import { View, Image, StyleSheet } from "react-native";
 import colors from "../config/colors";
 import ListItem from "../components/lists/ListItem";
 import Text from "../components/Text";
+import { ScrollView } from "react-native-gesture-handler";
 
-function ListingDetailsScreen(props) {
+function ListingDetailsScreen({ route }) {
+  const lisitng = route.params;
+
   return (
-    <View>
-      <Image style={styles.image} source={require("../assets/jacket.jpg")} />
+    <ScrollView>
+      <Image style={styles.image} source={lisitng.image} />
       <View style={styles.detailsContainer}>
-        <Text style={styles.title}>Red jacket for sale</Text>
-        <Text style={styles.price}>$100</Text>
+        <Text style={styles.title}>{lisitng.title}</Text>
+        <Text style={styles.price}>${lisitng.price}</Text>
         <View style={styles.userContainer}>
           <ListItem
             image={require("../assets/mosh.jpg")}
-            title="Mosh Hamedani"
-            subTitle="5 Listings"
+            title='Mosh Hamedani'
+            subTitle='5 Listings'
           />
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
